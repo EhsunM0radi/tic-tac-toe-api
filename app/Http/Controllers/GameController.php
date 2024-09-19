@@ -37,7 +37,7 @@ class GameController extends Controller
 
     public function gameTokens(Request $request)
     {
-        $tokens = GameTokens::select('id','token')->get();
+        $tokens = GameTokens::select('id','token','final_map')->get();
         return response()->json($tokens,200);
     }
 }
